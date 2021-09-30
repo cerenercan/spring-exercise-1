@@ -14,7 +14,6 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@ToString
 public class Book {
 
     @Id
@@ -30,6 +29,16 @@ public class Book {
     public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", authors=" + authors +
+                '}';
     }
 
     @Override

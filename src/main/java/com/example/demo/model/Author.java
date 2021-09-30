@@ -14,7 +14,6 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@ToString
 public class Author {
 
     @Id
@@ -28,6 +27,16 @@ public class Author {
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 
     @Override
